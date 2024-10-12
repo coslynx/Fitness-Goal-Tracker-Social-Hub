@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom theme configurations for Tailwind CSS */
+@import "tailwind.config.js";
+
+/* Ensure consistent typography styles across the application */
+@import "src/shared/ui-components/src/Typography/Typography.styles.ts"; 
+
+/* Import global styles from the shared UI components */
+@import "src/shared/ui-components/src/index.ts"; 
+
+/* Ensure accessibility guidelines are followed */
+@import "src/shared/utils/accessibility/accessibility.styles.ts"; 
+
+/* Custom global styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
