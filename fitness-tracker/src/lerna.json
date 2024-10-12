@@ -1,0 +1,49 @@
+{
+  "version": "5.0.1",
+  "npmClient": "npm",
+  "useWorkspaces": true,
+  "packages": [
+    "src/frontend/app",
+    "src/shared",
+    "src/backend"
+  ],
+  "command": {
+    "publish": {
+      "ignore": [
+        "src/frontend/app/public",
+        "src/frontend/app/tests",
+        "src/backend/tests",
+        "src/backend/src/.env"
+      ],
+      "conventionalCommits": true,
+      "message": "chore(release): publish v${version}",
+      "access": "public",
+      "registry": "https://registry.npmjs.org/",
+      "tag": "latest"
+    },
+    "bootstrap": {
+      "ignore": [
+        "src/frontend/app/public",
+        "src/frontend/app/tests",
+        "src/backend/tests",
+        "src/backend/src/.env"
+      ]
+    },
+    "run": {
+      "ignore": [
+        "src/frontend/app/public",
+        "src/frontend/app/tests",
+        "src/backend/tests",
+        "src/backend/src/.env"
+      ]
+    },
+    "exec": {
+      "ignore": [
+        "src/frontend/app/public",
+        "src/frontend/app/tests",
+        "src/backend/tests",
+        "src/backend/src/.env"
+      ]
+    }
+  }
+}
